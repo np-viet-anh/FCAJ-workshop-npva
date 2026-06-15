@@ -1,4 +1,4 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+baseURL = "https://np-viet-anh.github.io/FCAJ-workshop-npva/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
