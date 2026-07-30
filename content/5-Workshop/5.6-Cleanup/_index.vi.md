@@ -1,37 +1,40 @@
 ---
 title : "Dọn dẹp tài nguyên"
-date : 2024-01-01
+date: 2026-08-30 
 weight : 6
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
 
-#### Dọn dẹp tài nguyên
+#### Quy trình làm sạch tài nguyên (Cleanup)
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Sau khi hoàn thành bài thực hành và báo cáo, nếu bạn không có nhu cầu tiếp tục sử dụng ứng dụng trong thực tế, hãy dọn dẹp các tài nguyên đã khởi tạo để tránh phát sinh bất kỳ khoản phí ngoài ý muốn nào trên tài khoản AWS của bạn.
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+> [!WARNING]
+> Việc giữ lại Tên miền (Domain Name) trên Route 53 sẽ phát sinh chi phí duy trì hàng năm (khoảng $10 - $16/năm). Các dịch vụ Serverless khác (S3, Lambda, API Gateway, DynamoDB) chỉ tính phí dựa trên lưu lượng sử dụng, nếu không có truy cập sẽ gần như bằng 0, nhưng vẫn nên được dọn dẹp để giữ tài khoản gọn gàng.
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+1. **Amazon CloudFront:**
+   - Chọn Distribution, nhấn **Disable**.
+   - Đợi sau khi trạng thái chuyển sang Disabled hoàn toàn, nhấn **Delete**.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+2. **Amazon S3:**
+   - Vào S3 Bucket chứa mã nguồn tĩnh.
+   - Chọn **Empty** (Làm trống toàn bộ file) và gõ xác nhận `permanently delete`.
+   - Chọn **Delete bucket** để xóa hoàn toàn Bucket.
 
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+3. **Amazon API Gateway:**
+   - Trong giao diện API Gateway, vào phần Custom domain names và **Delete** domain đã map.
+   - Trở lại danh sách APIs, chọn HTTP API đã tạo, nhấn nút **Delete**.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+4. **AWS Lambda:**
+   - Tìm đến Function `URLShortener`, trong mục Actions chọn **Delete**.
 
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
+5. **Amazon DynamoDB:**
+   - Vào phần Tables, chọn bảng `URLShortener` và tiến hành xóa bảng (**Delete table**).
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+6. **AWS Certificate Manager (ACM):**
+   - Chọn các chứng chỉ đã tạo và thao tác **Delete**.
 
-5. Xóa các S3 bucket
-
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+7. **Amazon Route 53 (Tùy chọn):**
+   - Vào Hosted zones, xóa các bản ghi thủ công (trừ NS và SOA), sau đó xóa Hosted zone.
+   - *Lưu ý:* Việc hủy đăng ký (delete registration) tên miền quốc tế không được hỗ trợ hoàn tiền sau khi đã mua. Bạn có thể vô hiệu hóa tự động gia hạn (Disable auto-renew) trong mục Registered domains.

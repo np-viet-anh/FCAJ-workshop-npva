@@ -1,6 +1,6 @@
 ---
 title: "Báo cáo thực tập"
-date: 2024-01-01
+date: 2026-08-30
 weight: 1
 chapter: false
 ---
@@ -15,7 +15,7 @@ chapter: false
 
 &emsp; **Trường:** Trường Đại học Bách khoa, Đại học Quốc gia TP.HCM
 
-&emsp; **Ngành:** Khoa học máy tính
+&emsp; **Ngành:** Khoa học Máy tính
 
 &emsp; **Lớp:** MT23KHM1
 

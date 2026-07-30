@@ -1,32 +1,40 @@
 ---
-title : "Clean up"
-date : 2024-01-01
+title : "Resource Cleanup"
+date : 2026-08-30 
 weight : 6
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
-Congratulations on completing this workshop! 
-In this workshop, you learned architecture patterns for accessing Amazon S3 without using the Public Internet. 
-+ By creating a gateway endpoint, you enabled direct communication between EC2 resources and Amazon S3, without traversing an Internet Gateway. 
-+ By creating an interface endpoint you extended S3 connectivity to resources running in your on-premises data center via AWS Site-to-Site VPN or Direct Connect. 
 
-#### clean up
-1. Navigate to Hosted Zones on the left side of Route 53 console. Click the name of *s3.us-east-1.amazonaws.com* zone. Click Delete and confirm deletion by typing delete. 
+#### Cleanup Process
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+After completing the lab and report, if you do not intend to continue using the application in practice, please clean up the created resources to avoid incurring any unexpected charges on your AWS account.
 
-2. Disassociate the Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+> [!WARNING]
+> Keeping the Domain Name on Route 53 will incur an annual maintenance fee (around $10 - $16/year). Other Serverless services (S3, Lambda, API Gateway, DynamoDB) only charge based on usage traffic; if there is no access, it will be nearly 0, but they should still be cleaned up to keep the account tidy.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+1. **Amazon CloudFront:**
+   - Select the Distribution, click **Disable**.
+   - Wait until the status fully changes to Disabled, then click **Delete**.
 
-4. Open the CloudFormation console  and delete the two CloudFormation Stacks that you created for this lab:
-+ PLOnpremSetup
-+ PLCloudSetup
+2. **Amazon S3:**
+   - Go to the S3 Bucket containing the static source code.
+   - Select **Empty** (Empty all files) and type `permanently delete` to confirm.
+   - Select **Delete bucket** to completely delete the Bucket.
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+3. **Amazon API Gateway:**
+   - In the API Gateway interface, go to Custom domain names and **Delete** the mapped domain.
+   - Return to the APIs list, select the created HTTP API, click the **Delete** button.
 
-5. Delete S3 buckets
-+ Open S3 console
-+ Choose the bucket we created for the lab, click and confirm empty. Click delete and confirm delete.
+4. **AWS Lambda:**
+   - Navigate to the `URLShortener` Function, under the Actions menu, select **Delete**.
 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+5. **Amazon DynamoDB:**
+   - Go to the Tables section, select the `URLShortener` table, and proceed to delete the table (**Delete table**).
+
+6. **AWS Certificate Manager (ACM):**
+   - Select the created certificates and perform the **Delete** action.
+
+7. **Amazon Route 53 (Optional):**
+   - Go to Hosted zones, manually delete records (except NS and SOA), then delete the Hosted zone.
+   - *Note:* Deleting international domain registrations (delete registration) is not supported for refunds after purchase. You can disable auto-renew in the Registered domains section.
