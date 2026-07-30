@@ -1,6 +1,6 @@
 ---
 title : "Tên miền tùy chỉnh (Custom Domain)"
-date: 2024-01-01 
+date: 2026-07-25
 weight : 5
 chapter : false
 pre : " <b> 5.5. </b> "
