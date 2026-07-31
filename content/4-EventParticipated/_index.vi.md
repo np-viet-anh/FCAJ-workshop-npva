@@ -24,6 +24,6 @@ Trong quá trình tham gia chương trình, em đã tham gia 2 events, với m�
 
 &emsp;**Thời gian:** 25/07/2026
 
-&emsp;**Địa điểm:** *(Trực tuyến / Địa điểm tổ chức)*
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự

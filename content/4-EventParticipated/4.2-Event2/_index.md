@@ -92,6 +92,6 @@ Participating in the **"FCAJ – Agentic AI Build Week"** was an incredibly exci
 - The FCAJ community is an incredible source of support and inspiration on the AI & Cloud learning journey
 
 #### Some event photos
-*Add your event photos here*
+![Overall image of FCAJ Agentic AI Build Week](/images/4-EventParticipated/anh2.jpg)
 
 > Overall, "FCAJ – Agentic AI Build Week" was a meaningful event that helped me not only strengthen my technical skills in Agentic AI but also sharpen my problem-solving mindset, teamwork spirit, and ability to deliver real products under time pressure.

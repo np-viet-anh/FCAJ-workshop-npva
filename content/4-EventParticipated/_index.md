@@ -24,6 +24,6 @@ During my participation in the program, I attended 2 events. Each one was a memo
 
 &emsp;**Date & Time:** July 25, 2026
 
-&emsp;**Location:** *(Online / Venue)*
+&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
 
 &emsp;**Role:** Attendee
