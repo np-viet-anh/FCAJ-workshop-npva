@@ -6,120 +6,83 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch "Saturday Meet up 13-06-2026"
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Tạo không gian chia sẻ kiến thức, kỹ năng và kinh nghiệm làm việc thực tế từ các diễn giả
+- Kết nối các thành viên trong cộng đồng, mở ra cơ hội trao đổi và học hỏi lẫn nhau
+- Tạo cơ hội để các thành viên không chỉ tham dự mà còn có thể trở thành diễn giả, chia sẻ hành trình học tập và phát triển bản thân
 
-### Danh Sách Diễn Giả
+### Thông Tin Sự Kiện
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Tên sự kiện** | Saturday Meet up 13-06-2026 |
+| **Thời gian** | 09:00 – 12:00, ngày 13/06/2026 |
+| **Địa điểm** | Tầng 26, Tòa nhà Bitexco Financial Tower |
+| **Vai trò** | Người tham dự |
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Chia sẻ từ diễn giả
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Sự kiện quy tụ các diễn giả với những câu chuyện thực tế, kiến thức chuyên sâu và kỹ năng đúc kết từ quá trình làm việc thực tế. Mỗi bài chia sẻ mang đến một góc nhìn khác nhau, giúp người tham dự mở rộng tư duy và tiếp cận với những kinh nghiệm thực tiễn quý giá.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Cơ hội trở thành diễn giả
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+- Sự kiện không chỉ dừng lại ở việc tiếp nhận kiến thức mà còn mở ra cơ hội cho bất kỳ thành viên nào muốn **chia sẻ kiến thức, kinh nghiệm hoặc hành trình học tập** của mình với cộng đồng
+- Những ai quan tâm đến việc trở thành diễn giả có thể liên hệ với đội ngũ admin để đăng ký tham gia các phiên tiếp theo
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Kết nối cộng đồng
 
-#### Domain-Driven Design (DDD)
-
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
-
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+- Tạo môi trường giao lưu thân thiện, cởi mở giữa các thành viên
+- Khuyến khích trao đổi ý tưởng và hỗ trợ lẫn nhau trong hành trình học tập và sự nghiệp
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
+#### Kiến Thức & Kỹ Năng
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+- Tiếp thu được những kiến thức thực tiễn được chia sẻ từ các diễn giả có kinh nghiệm thực tế
+- Hiểu rõ hơn về cách áp dụng kiến thức lý thuyết vào công việc thực tế thông qua các câu chuyện thực tế
 
-#### Kiến Trúc Kỹ Thuật
+#### Kỹ Năng Mềm
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+- **Kỹ năng giao tiếp**: Thực hành giao tiếp, đặt câu hỏi và lắng nghe trong môi trường chuyên nghiệp
+- **Tư duy mở**: Tiếp cận đa góc nhìn từ các diễn giả với các lĩnh vực và kinh nghiệm khác nhau
+- **Networking**: Mở rộng mạng lưới kết nối với các thành viên trong cộng đồng
 
-#### Chiến Lược Hiện Đại Hóa
+#### Cảm Hứng
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+- Được truyền cảm hứng bởi những câu chuyện thực tế, từ đó thúc đẩy bản thân học hỏi và phát triển nhiều hơn
+- Nhận ra tầm quan trọng của việc **chia sẻ kiến thức** – không chỉ tiếp nhận mà còn đóng góp lại cho cộng đồng
 
-### Ứng Dụng Vào Công Việc
+### Trải Nghiệm Trong Sự Kiện
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Tham gia sự kiện **"Saturday Meet up 13-06-2026"** là một trải nghiệm rất đáng giá. Được tổ chức tại tầng 26 của Tòa nhà Bitexco Financial Tower, sự kiện mang đến một không gian chia sẻ ấm áp, chuyên nghiệp và đầy cảm hứng.
 
-### Trải nghiệm trong event
+#### Không khí sự kiện
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+- Không gian tổ chức tại tầng 26 Bitexco tạo nên một bầu không khí vừa chuyên nghiệp vừa gần gũi, thúc đẩy sự giao lưu và kết nối
+- Các phiên chia sẻ được dẫn dắt mạch lạc, nội dung súc tích và gần với thực tế
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+#### Học hỏi từ những câu chuyện thực tế
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+- Các diễn giả không chỉ truyền đạt lý thuyết mà còn chia sẻ **câu chuyện thực tế** – những thành công, thất bại và bài học đắt giá trong quá trình làm việc
+- Những chia sẻ này giúp tôi nhìn nhận rõ hơn về lộ trình sự nghiệp và cách đối mặt với những thách thức thực tế
 
 #### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+
+- Sự kiện là cơ hội tuyệt vời để gặp gỡ, làm quen và kết nối với nhiều thành viên khác trong cộng đồng
+- Những cuộc trò chuyện bên lề cũng mang lại không ít thông tin hữu ích và những góc nhìn thú vị
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+
+- Kiến thức không chỉ đến từ sách vở mà còn từ những câu chuyện, trải nghiệm thực tế của người đi trước
+- **Cộng đồng là tài nguyên quý giá** – việc tham gia và đóng góp cho cộng đồng chính là cách học hỏi hiệu quả nhất
+- Mỗi người đều có câu chuyện và giá trị để chia sẻ; đừng ngại trở thành diễn giả và chia sẻ hành trình của mình
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+* Thêm các hình ảnh của bạn tại đây
+
+> Tổng thể, sự kiện "Saturday Meet up 13-06-2026" không chỉ mang lại kiến thức và kỹ năng mới mà còn truyền cảm hứng để tôi tiếp tục học hỏi, chia sẻ và đóng góp cho cộng đồng ngày một nhiều hơn.

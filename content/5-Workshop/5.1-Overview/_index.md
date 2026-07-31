@@ -8,6 +8,8 @@ pre : " <b> 5.1. </b> "
 
 #### Serverless URL Shortener Architecture
 
+![AWS Serverless URL Shortener Architecture Diagram](/images/5-Workshop/5.1-Overview/architecture.png)
+
 The system is designed with a modern Serverless architecture, utilizing fully managed AWS services:
 
 1. **End Users:** Access the web interface through a short domain (Custom Domain).

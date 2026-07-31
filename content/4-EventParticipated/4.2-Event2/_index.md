@@ -1,126 +1,97 @@
 ---
 title: "Event 2"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: "FCAJ – Agentic AI Build Week"
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Create an intensive hands-on environment focused on **Agentic AI** — the latest AI trend in building autonomous AI systems
+- Help FCAJ members apply AI knowledge to real-world projects during a focused product-building week
+- Foster collaboration, creativity, and learning through the collective experience of building practical AI solutions
 
-### Speakers
+### Event Details
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+| Detail | Information |
+|--------|-------------|
+| **Event Name** | FCAJ – Agentic AI Build Week |
+| **Date** | July 25, 2026 |
+| **Program** | First Cloud AI Journey (FCAJ) |
+| **Role** | Attendee |
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### Agentic AI – The core technology
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+**Agentic AI** represents the next evolution of artificial intelligence, where AI models go beyond answering questions to **autonomously planning, executing multi-step tasks**, and completing complex objectives:
 
-#### Transitioning to modern application architecture – Microservices
+- **AI Agents**: Agents capable of reasoning, planning, and taking action
+- **Multi-agent systems**: Multiple agents collaborating to solve complex problems
+- **Tool use & orchestration**: Agents leveraging external tools (APIs, databases, code execution, etc.) to complete tasks
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### Build Week – A real-world building challenge
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- Focused on **building real AI products** within a defined time constraint
+- Each member/team developed an Agentic AI solution addressing a practical problem
+- Provided hands-on practice with key technical skills: agent design, API integration, and building automated workflows
 
-#### Domain-Driven Design (DDD)
+#### FCAJ Community
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Networked and connected with FCAJ members who share a passion for AI and Cloud
+- Learned from members with diverse backgrounds and experiences across the community
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Technical Knowledge
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+- **Agentic AI concepts**: Gained a solid understanding of AI agent architecture and how autonomous systems operate
+- **Advanced prompt engineering**: Techniques for designing prompts for complex agent systems
+- **Workflow automation**: Building automated pipelines using AI agents
+- **AWS AI Services**: Applying AWS AI services in Agentic AI development (Amazon Bedrock, AWS Lambda, etc.)
 
-#### Technical Architecture
+#### Practical Skills
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- Designed and built a **complete AI agent** from concept to working product
+- Integrated the agent with external tools and real-world APIs
+- Debugged and optimized agent behavior across various real-world scenarios
 
-#### Modernization Strategy
+#### Problem-Solving Mindset
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Problem-first approach**: Start from a real-world problem, then choose the right technology
+- **Iterative development**: Build fast, test early, and continuously improve
+- **Collaboration mindset**: Effective teamwork in a hackathon/build week environment
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Participating in the **"FCAJ – Agentic AI Build Week"** was an incredibly exciting and challenging experience. This was not a typical theory-based event — it was a **hands-on week** where every member directly built their own AI product.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Real-world challenges
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+- The time-constrained nature of Build Week forced me to **prioritize, make quick decisions**, and focus on what mattered most
+- Every technical issue I encountered was a real-world lesson, requiring **debugging skills and problem-solving** under practical conditions
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+#### Learning from the community
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+- Connecting with FCAJ members showed me the diversity in approaches to AI problems — each person brought a unique style and perspective
+- Sharing progress and receiving feedback from the community significantly accelerated product improvements
+
+#### Outcomes achieved
+
+- Completed a real **Agentic AI project** within the event's scope
+- Gained hands-on experience with cutting-edge Agentic AI technologies
+- Built a personal portfolio piece with an AI project that can continue to be developed beyond the event
 
 #### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+
+- **Learning by doing** is the most effective way to master new technology
+- Agentic AI opens up endless possibilities for automating and solving complex problems
+- The FCAJ community is an incredible source of support and inspiration on the AI & Cloud learning journey
 
 #### Some event photos
-*Add your event photos here*  
+*Add your event photos here*
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, "FCAJ – Agentic AI Build Week" was a meaningful event that helped me not only strengthen my technical skills in Agentic AI but also sharpen my problem-solving mindset, teamwork spirit, and ability to deliver real products under time pressure.

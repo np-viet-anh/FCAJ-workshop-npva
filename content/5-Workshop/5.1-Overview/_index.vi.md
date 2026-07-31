@@ -1,12 +1,14 @@
 ---
 title : "Tổng quan hệ thống"
-date: 2026-07-25
+date: 2024-01-01
 weight : 1
 chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
 #### Kiến trúc Serverless URL Shortener
+
+![Sơ đồ kiến trúc AWS Serverless URL Shortener](/images/5-Workshop/5.1-Overview/architecture.png)
 
 Hệ thống được thiết kế theo kiến trúc Serverless hiện đại, sử dụng các dịch vụ quản lý hoàn toàn của AWS:
 
