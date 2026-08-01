@@ -53,6 +53,8 @@ pre: " <b> 4.2. </b> "
 - **Workflow automation**: Xây dựng pipeline tự động hóa sử dụng AI agents
 - **AWS AI Services**: Ứng dụng các dịch vụ AI của AWS trong xây dựng Agentic AI (Amazon Bedrock, AWS Lambda, v.v.)
 
+![Kiến trúc AWS trong dự án Agentic AI](/images/Kiến trúc AWS.jpg)
+
 #### Kỹ Năng Thực Hành
 
 - Thiết kế và xây dựng một **AI agent hoàn chỉnh** từ ý tưởng đến sản phẩm

@@ -53,6 +53,8 @@ pre: " <b> 4.2. </b> "
 - **Workflow automation**: Building automated pipelines using AI agents
 - **AWS AI Services**: Applying AWS AI services in Agentic AI development (Amazon Bedrock, AWS Lambda, etc.)
 
+![AWS Architecture in Agentic AI Project](/images/Kiến trúc AWS.jpg)
+
 #### Practical Skills
 
 - Designed and built a **complete AI agent** from concept to working product
