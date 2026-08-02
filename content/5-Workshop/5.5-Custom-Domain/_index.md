@@ -1,6 +1,6 @@
 ---
 title : "Custom Domain Configuration"
-date : 2026-08-30 
+date: 2026-07-25
 weight : 5
 chapter : false
 pre : " <b> 5.5. </b> "
