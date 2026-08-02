@@ -8,7 +8,7 @@ pre : " <b> 5.1. </b> "
 
 #### Kiến trúc Serverless URL Shortener
 
-![Sơ đồ kiến trúc AWS Serverless URL Shortener](/images/5-Workshop/5.1-Overview/architecture.png)
+![Sơ đồ kiến trúc AWS Serverless URL Shortener](/images/kientrucAWS.jpg)
 
 Hệ thống được thiết kế theo kiến trúc Serverless hiện đại, sử dụng các dịch vụ quản lý hoàn toàn của AWS:
 

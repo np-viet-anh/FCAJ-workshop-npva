@@ -8,7 +8,7 @@ pre : " <b> 5.1. </b> "
 
 #### Serverless URL Shortener Architecture
 
-![AWS Serverless URL Shortener Architecture Diagram](/images/5-Workshop/5.1-Overview/architecture.png)
+![AWS Serverless URL Shortener Architecture Diagram](/images/kientrucAWS.jpg)
 
 The system is designed with a modern Serverless architecture, utilizing fully managed AWS services:
 
