@@ -12,7 +12,7 @@ var getUrlParameter = function getUrlParameter(sPageURL) {
     }
     return obj;
   } else {
-    return undefined;
+    return {};
   }
 };
 
