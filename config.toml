@@ -1,6 +1,6 @@
 baseURL = "https://np-viet-anh.github.io/FCAJ-workshop-npva/"
-relativeURLs = true
-canonifyURLs = false
+relativeURLs = false
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
