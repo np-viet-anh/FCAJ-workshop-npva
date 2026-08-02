@@ -1,5 +1,5 @@
 baseURL = "https://np-viet-anh.github.io/FCAJ-workshop-npva/"
-relativeURLs = false
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 

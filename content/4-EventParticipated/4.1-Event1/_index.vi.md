@@ -83,6 +83,6 @@ Tham gia sự kiện **"Saturday Meet up 13-06-2026"** là một trải nghiệm
 - Mỗi người đều có câu chuyện và giá trị để chia sẻ; đừng ngại trở thành diễn giả và chia sẻ hành trình của mình
 
 #### Một số hình ảnh khi tham gia sự kiện
-![Ảnh toàn cảnh sự kiện Saturday Meetup 13-06-2026](../images/4-EventParticipated/4.1-Event1/canh.jpg)
+![Ảnh toàn cảnh sự kiện Saturday Meetup 13-06-2026](/images/4-EventParticipated/4.1-Event1/canh.jpg)
 
 > Tổng thể, sự kiện "Saturday Meet up 13-06-2026" không chỉ mang lại kiến thức và kỹ năng mới mà còn truyền cảm hứng để tôi tiếp tục học hỏi, chia sẻ và đóng góp cho cộng đồng ngày một nhiều hơn.
