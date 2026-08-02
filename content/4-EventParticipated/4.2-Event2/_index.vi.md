@@ -94,6 +94,6 @@ Tham gia **"FCAJ – Agentic AI Build Week"** là một trải nghiệm cực k�
 - Cộng đồng FCAJ là nguồn hỗ trợ và cảm hứng tuyệt vời trong hành trình học tập AI & Cloud
 
 #### Một số hình ảnh khi tham gia sự kiện
-![Toàn cảnh sự kiện FCAJ Agentic AI Build Week](/images/4-EventParticipated/anh2.jpg)
+![Toàn cảnh sự kiện FCAJ Agentic AI Build Week](../images/4-EventParticipated/anh2.jpg)
 
 > Tổng thể, "FCAJ – Agentic AI Build Week" là một sự kiện ý nghĩa giúp tôi không chỉ nâng cao kỹ năng kỹ thuật về Agentic AI mà còn rèn luyện tư duy giải quyết vấn đề, tinh thần làm việc nhóm và khả năng xây dựng sản phẩm thực tế dưới áp lực thời gian.

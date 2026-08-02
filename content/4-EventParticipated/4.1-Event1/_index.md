@@ -83,6 +83,6 @@ Attending the **"Saturday Meet up 13-06-2026"** was a truly rewarding experience
 - Everyone has a story and value to share; don't hesitate to become a speaker and share your own journey
 
 #### Some event photos
-![Overall image of Saturday Meetup 13-06-2026](/images/4-EventParticipated/anh1.jpg)
+![Overall image of Saturday Meetup 13-06-2026](../images/4-EventParticipated/anh1.jpg)
 
 > Overall, the "Saturday Meet up 13-06-2026" event not only brought new knowledge and skills but also inspired me to keep learning, sharing, and contributing to the community even more.
