@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 3"
 date: 2024-01-01
 weight: 1
@@ -6,23 +6,22 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# Host giao diện Web tĩnh "rẻ như cho" nhưng tốc độ bàn thờ với Amazon S3 và CloudFront!
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Xong phần Backend, tới phần giao diện (Frontend) của ứng dụng URL Shortener. Giao diện của mình chỉ đơn thuần là HTML, Javascript và TailwindCSS. Nếu chạy một server EC2 chỉ để host mấy file tĩnh này thì quá lãng phí.
 
-Các điểm chính cần nắm:
+Do đó, giải pháp "quốc dân" trên AWS mà mình sử dụng là kết hợp **Amazon S3** và **Amazon CloudFront**:
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+1️⃣ **Amazon S3 (Lưu trữ):** Chuyển S3 bucket sang chế độ Static Website Hosting. Nơi đây đóng vai trò như ổ cứng chứa source code UI của mình.
+2️⃣ **Amazon CloudFront (CDN):** Đây là "vũ khí bí mật". CloudFront phân phối nội dung (cache) tới các Edge Locations trên toàn thế giới. Dù người dùng ở Mỹ hay Việt Nam truy cập, web vẫn load ngay lập tức.
+3️⃣ **Bảo mật & Custom Domain:** CloudFront giúp mình dễ dàng ép buộc (force) kết nối HTTPS thông qua chứng chỉ SSL/TLS miễn phí từ AWS Certificate Manager (ACM), và trỏ tên miền cá nhân bằng Route 53.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+💡 **Kết quả:** Mình có một website frontend khả năng chịu tải hàng chục ngàn truy cập một lúc mà không sập, trong khi chi phí mỗi tháng chỉ bằng... tiền giữ xe.
 
-...Hình ảnh...
+Anh em thường host các dự án React/Vue/HTML tĩnh bằng dịch vụ gì trên AWS? 👇
 
-...Link...
-
-...Hướng dẫn...
+---
+**Tài liệu tham khảo:**
+- [Host a static website using Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
+- [Amazon CloudFront](https://aws.amazon.com/cloudfront/)
+- [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/)

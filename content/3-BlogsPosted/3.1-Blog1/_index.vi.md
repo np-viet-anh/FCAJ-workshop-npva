@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 1"
 date: 2024-01-01
 weight: 1
@@ -6,23 +6,24 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# Đưa FastAPI (Python) lên AWS Lambda một cách dễ dàng với thư viện Mangum!
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+[CHIA SẺ KINH NGHIỆM] Xây dựng Backend hoàn toàn Serverless cực nhanh và tiết kiệm chi phí! ☁️
 
-Các điểm chính cần nắm:
+Trong quá trình làm project URL Shortener, mình đã quyết định sử dụng kiến trúc hoàn toàn không máy chủ (Serverless) cho phần Backend thay vì thuê EC2. 
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+Stack mình chọn là **AWS Lambda** + **API Gateway** kết hợp với **FastAPI (Python)**. Nhưng làm sao để một framework web như FastAPI có thể chạy mượt mà trên Lambda? Câu trả lời chính là sử dụng thư viện **Mangum**.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+✨ **Lợi ích mà stack này mang lại:**
+- **Zero-ops:** Không cần phải quản lý OS, không lo việc scale server. Lambda tự động scale dựa trên số lượng truy cập.
+- **Tiết kiệm chi phí:** Trong giai đoạn dev và ứng dụng nhỏ, chi phí chạy gần như bằng $0 nhờ AWS Free Tier. Mình chỉ trả tiền cho số milliseconds mà code chạy.
+- **Tốc độ code:** Code bằng FastAPI rất nhàn và hiện đại, sinh sẵn document Swagger/OpenAPI.
 
-...Hình ảnh...
+Có anh em nào trong group cũng đang ghiền hệ sinh thái Serverless trên AWS giống mình không? Mọi người thường dùng API Gateway hay ALB để trigger Lambda? Chia sẻ cùng mình nhé! 👇
 
-...Link...
-
-...Hướng dẫn...
+---
+**Tài liệu tham khảo:**
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [Amazon API Gateway](https://aws.amazon.com/api-gateway/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Mangum](https://mangum.io/)

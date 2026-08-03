@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 1"
 date: 2024-01-01
 weight: 1
@@ -6,23 +6,24 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# Easily deploy FastAPI (Python) to AWS Lambda with Mangum!
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+[EXPERIENCE SHARING] Building a fully Serverless Backend, fast and cost-effective! ☁️
 
-Key points to know:
+While working on my URL Shortener project, I decided to use a fully Serverless architecture for the Backend instead of provisioning an EC2 instance.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+The stack I chose is **AWS Lambda** + **API Gateway** combined with **FastAPI (Python)**. But how can a web framework like FastAPI run smoothly on Lambda? The answer is using the **Mangum** library.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+✨ **Benefits of this stack:**
+- **Zero-ops:** No OS management, no worrying about scaling servers. Lambda scales automatically based on traffic.
+- **Cost-effective:** During development and for small applications, the running cost is close to $0 thanks to the AWS Free Tier. You only pay for the compute time you consume.
+- **Development speed:** Coding with FastAPI is fast, modern, and it automatically generates Swagger/OpenAPI documentation.
 
-...Image...
+Are there any other developers in the group who love the AWS Serverless ecosystem as much as I do? Do you usually use API Gateway or ALB to trigger Lambda? Let's share your thoughts below! 👇
 
-...Link...
-
-...Guide...
+---
+**References:**
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [Amazon API Gateway](https://aws.amazon.com/api-gateway/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Mangum](https://mangum.io/)

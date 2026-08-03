@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Blog 2"
 date: 2024-01-01
 weight: 1
@@ -6,23 +6,21 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# Why I chose Amazon DynamoDB for my URL Shortener application?
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+When building a URL Shortener application, one of the most critical challenges is data retrieval speed: "How can the system immediately find the original link and redirect in less than 1 second when a user clicks on a short link?"
 
-Key points to know:
+I tested with **Amazon DynamoDB** and was truly impressed for the following reasons:
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+🔹 **Perfect Key-Value architecture:** A URL Shortener essentially just maps a `short_id` to a `long_url`. DynamoDB is a NoSQL database built to handle such Key-Value queries extremely optimally.
+🔹 **Single-digit millisecond latency:** Read/write speeds are consistently maintained at single-digit milliseconds at any scale.
+🔹 **Serverless Database:** No installation, no database cluster maintenance (like RDS). Just create a table and use it, it scales automatically.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+Configuring AWS Lambda to communicate with DynamoDB using `boto3` is also very straightforward. However, I learned that you must pay attention to configuring the IAM Role correctly (least privilege) so that Lambda only has permission to operate on that specific table.
 
-...Image...
+If you were building a similar system, would you choose RDS, ElastiCache (Redis), or DynamoDB? Let's discuss! 🚀
 
-...Link...
-
-...Guide...
+---
+**References:**
+- [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+- [Boto3 DynamoDB Documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
