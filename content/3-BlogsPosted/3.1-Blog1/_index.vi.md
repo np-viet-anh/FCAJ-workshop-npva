@@ -8,16 +8,16 @@ pre: " <b> 3.1. </b> "
 
 # Triển khai FastAPI (Python) trên AWS Lambda bằng thư viện Mangum
 
-Trong quá trình phát triển dự án URL Shortener, nhóm đã quyết định ứng dụng kiến trúc Serverless (không máy chủ) cho thành phần Backend thay vì triển khai trên các máy chủ ảo EC2 truyền thống.
+Kiến trúc Serverless (không máy chủ) đang trở thành một tiêu chuẩn mới trong việc phát triển ứng dụng Backend nhờ khả năng tối ưu hóa cả về chi phí lẫn công sức vận hành. 
 
-Công nghệ được lựa chọn bao gồm **AWS Lambda**, **API Gateway** kết hợp với framework **FastAPI (Python)**. Để ứng dụng FastAPI có thể tương thích và hoạt động ổn định trên môi trường AWS Lambda, dự án sử dụng thư viện **Mangum** làm bộ chuyển đổi.
+Một trong những công nghệ phổ biến được lựa chọn là sự kết hợp giữa **AWS Lambda**, **API Gateway** và framework **FastAPI (Python)**. Tuy nhiên, để một ứng dụng web framework truyền thống như FastAPI có thể tương thích và hoạt động ổn định trên môi trường Serverless của AWS Lambda, giải pháp tối ưu là sử dụng thư viện **Mangum** làm bộ chuyển đổi (adapter).
 
-**Các ưu điểm của giải pháp này:**
-- **Không yêu cầu vận hành (Zero-ops):** Khắc phục hoàn toàn gánh nặng quản trị hệ điều hành và mở rộng máy chủ. AWS Lambda sẽ tự động thay đổi quy mô dựa trên lưu lượng truy cập thực tế.
-- **Tối ưu hóa chi phí:** Trong giai đoạn phát triển và đối với các ứng dụng quy mô vừa và nhỏ, chi phí vận hành được giảm thiểu đáng kể, thường được bao phủ bởi gói AWS Free Tier. Chi phí chỉ phát sinh dựa trên thời gian thực thi mã nguồn.
-- **Tốc độ phát triển:** Quá trình lập trình với FastAPI diễn ra thuận lợi, hiện đại và tự động tạo ra tài liệu API theo chuẩn Swagger/OpenAPI.
+**Các ưu điểm của kiến trúc này:**
+- **Không yêu cầu vận hành (Zero-ops):** Khắc phục hoàn toàn gánh nặng quản trị hệ điều hành và mở rộng máy chủ. AWS Lambda sẽ tự động thay đổi quy mô dựa trên lưu lượng truy cập thực tế của hệ thống.
+- **Tối ưu hóa chi phí:** Đối với các ứng dụng quy mô vừa và nhỏ hoặc trong giai đoạn thử nghiệm, chi phí vận hành được giảm thiểu đáng kể, phần lớn được bao phủ bởi gói AWS Free Tier. Chi phí chỉ phát sinh dựa trên số mili-giây thực thi mã nguồn.
+- **Tốc độ phát triển:** Quá trình lập trình với FastAPI diễn ra thuận lợi, hiện đại và hỗ trợ tự động tạo ra tài liệu API theo chuẩn Swagger/OpenAPI.
 
-Phương pháp tiếp cận Serverless đang ngày càng chứng minh được hiệu quả trong việc xây dựng các ứng dụng trên đám mây AWS.
+Phương pháp tiếp cận Serverless kết hợp FastAPI và Mangum đang chứng minh được hiệu quả mạnh mẽ trong việc xây dựng các API trên đám mây AWS.
 
 ---
 **Tài liệu tham khảo:**

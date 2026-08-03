@@ -8,16 +8,16 @@ pre: " <b> 3.1. </b> "
 
 # Deploying FastAPI (Python) on AWS Lambda using the Mangum library
 
-During the development of the URL Shortener project, the team decided to adopt a Serverless architecture for the Backend component instead of deploying on traditional EC2 virtual servers.
+Serverless architecture is becoming a new standard in Backend application development due to its ability to optimize both costs and operational effort.
 
-The selected technology stack includes **AWS Lambda**, **API Gateway** combined with the **FastAPI (Python)** framework. To ensure the FastAPI application is compatible and runs reliably on the AWS Lambda environment, the project utilizes the **Mangum** library as an adapter.
+A popular technology stack includes the combination of **AWS Lambda**, **API Gateway**, and the **FastAPI (Python)** framework. However, for a traditional web framework like FastAPI to be compatible and run reliably on the AWS Lambda Serverless environment, the optimal solution is to use the **Mangum** library as an adapter.
 
-**Advantages of this solution:**
-- **Zero-ops:** Completely eliminates the burden of operating system administration and server scaling. AWS Lambda automatically scales based on actual traffic volume.
-- **Cost optimization:** During the development phase and for small to medium-scale applications, operational costs are significantly minimized, often covered by the AWS Free Tier. Costs are only incurred based on the actual code execution time.
-- **Development efficiency:** Programming with FastAPI is straightforward and modern, automatically generating API documentation according to the Swagger/OpenAPI standard.
+**Advantages of this architecture:**
+- **Zero-ops:** Completely eliminates the burden of operating system administration and server scaling. AWS Lambda automatically scales based on the actual traffic volume of the system.
+- **Cost optimization:** For small to medium-scale applications or during the testing phase, operational costs are significantly minimized, largely covered by the AWS Free Tier. Costs are only incurred based on the execution time of the code in milliseconds.
+- **Development efficiency:** Programming with FastAPI is straightforward and modern, supporting the automatic generation of API documentation according to the Swagger/OpenAPI standard.
 
-The Serverless approach is increasingly proving its effectiveness in building applications on the AWS cloud.
+The Serverless approach combining FastAPI and Mangum is strongly proving its effectiveness in building APIs on the AWS cloud.
 
 ---
 **References:**
