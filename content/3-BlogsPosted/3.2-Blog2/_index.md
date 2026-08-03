@@ -6,19 +6,17 @@ chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Why I chose Amazon DynamoDB for my URL Shortener application?
+# Reasons for choosing Amazon DynamoDB for a URL Shortener application
 
-When building a URL Shortener application, one of the most critical challenges is data retrieval speed: "How can the system immediately find the original link and redirect in less than 1 second when a user clicks on a short link?"
+When designing a URL Shortener system, one of the most rigorous technical requirements is data retrieval speed. The system must ensure the rapid lookup of the original link from the shortened code and execute the redirection in minimal time.
 
-I tested with **Amazon DynamoDB** and was truly impressed for the following reasons:
+The project selected **Amazon DynamoDB** as the primary database based on the following technical factors:
 
-🔹 **Perfect Key-Value architecture:** A URL Shortener essentially just maps a `short_id` to a `long_url`. DynamoDB is a NoSQL database built to handle such Key-Value queries extremely optimally.
-🔹 **Single-digit millisecond latency:** Read/write speeds are consistently maintained at single-digit milliseconds at any scale.
-🔹 **Serverless Database:** No installation, no database cluster maintenance (like RDS). Just create a table and use it, it scales automatically.
+- **Suitable Key-Value architecture:** A URL Shortener application fundamentally performs a mapping operation from a `short_id` to a `long_url`. DynamoDB is a NoSQL database specifically optimized for such Key-Value queries.
+- **Single-digit millisecond latency:** Read and write speeds are consistently maintained at under 10 milliseconds, regardless of how much the system scales.
+- **Serverless Database:** Completely minimizes the effort of installing and maintaining database cluster configurations (compared to solutions like Amazon RDS). Resource scaling is performed entirely automatically.
 
-Configuring AWS Lambda to communicate with DynamoDB using `boto3` is also very straightforward. However, I learned that you must pay attention to configuring the IAM Role correctly (least privilege) so that Lambda only has permission to operate on that specific table.
-
-If you were building a similar system, would you choose RDS, ElastiCache (Redis), or DynamoDB? Let's discuss! 🚀
+The integration between AWS Lambda and DynamoDB using the `boto3` library was straightforward. However, an important consideration during deployment is strictly adhering to the principle of least privilege when configuring the IAM Role, ensuring AWS Lambda only has permission to operate on the designated data table.
 
 ---
 **References:**

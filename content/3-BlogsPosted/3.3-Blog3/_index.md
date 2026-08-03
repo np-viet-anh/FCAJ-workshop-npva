@@ -6,19 +6,17 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Hosting a Static Website at near-zero cost with lightning speed using Amazon S3 and CloudFront!
+# High-performance and cost-optimized static Web hosting solution with Amazon S3 and CloudFront
 
-After finishing the Backend, let's talk about the Frontend of the URL Shortener application. My UI is simply HTML, Javascript, and TailwindCSS. Running an EC2 server just to host these static files would be a waste of resources.
+For the Frontend component of the URL Shortener application, the system utilizes static technologies including HTML, Javascript, and TailwindCSS. Deploying these static files on a traditional EC2 server would fail to maximize performance and result in resource waste.
 
-Therefore, the "standard" solution on AWS that I used is combining **Amazon S3** and **Amazon CloudFront**:
+Therefore, the implemented architecture is a combination of **Amazon S3** and **Amazon CloudFront**:
 
-1️⃣ **Amazon S3 (Storage):** Enable Static Website Hosting on the S3 bucket. This acts as the hard drive containing my UI source code.
-2️⃣ **Amazon CloudFront (CDN):** This is the "secret weapon". CloudFront distributes (caches) the content to Edge Locations worldwide. Whether a user accesses from the US or Vietnam, the web loads instantly.
-3️⃣ **Security & Custom Domain:** CloudFront helps me easily force HTTPS connections using a free SSL/TLS certificate from AWS Certificate Manager (ACM) and map my custom domain using Route 53.
+1. **Amazon S3 (Storage):** The S3 bucket is configured in Static Website Hosting mode, serving as the storage space for the entire user interface source code of the application.
+2. **Amazon CloudFront (Content Delivery Network - CDN):** CloudFront handles the distribution and caching of content at Edge Locations globally. This significantly reduces latency, ensuring the website loads rapidly regardless of the user's geographical location.
+3. **Security and Custom Domain:** CloudFront facilitates the establishment of encrypted HTTPS connections via a free SSL/TLS security certificate issued by AWS Certificate Manager (ACM), while integrating with Amazon Route 53 to route traffic to a custom domain.
 
-💡 **Result:** I have a frontend website capable of handling tens of thousands of concurrent requests without crashing, while the monthly cost is incredibly low.
-
-What services on AWS do you usually use to host your static React/Vue/HTML projects? 👇
+**Result:** This solution provides a frontend platform capable of handling high concurrent traffic volumes with excellent performance, while monthly maintenance costs are optimized to the lowest possible level.
 
 ---
 **References:**

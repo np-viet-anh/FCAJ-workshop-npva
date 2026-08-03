@@ -6,20 +6,18 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Easily deploy FastAPI (Python) to AWS Lambda with Mangum!
+# Deploying FastAPI (Python) on AWS Lambda using the Mangum library
 
-[EXPERIENCE SHARING] Building a fully Serverless Backend, fast and cost-effective! ☁️
+During the development of the URL Shortener project, the team decided to adopt a Serverless architecture for the Backend component instead of deploying on traditional EC2 virtual servers.
 
-While working on my URL Shortener project, I decided to use a fully Serverless architecture for the Backend instead of provisioning an EC2 instance.
+The selected technology stack includes **AWS Lambda**, **API Gateway** combined with the **FastAPI (Python)** framework. To ensure the FastAPI application is compatible and runs reliably on the AWS Lambda environment, the project utilizes the **Mangum** library as an adapter.
 
-The stack I chose is **AWS Lambda** + **API Gateway** combined with **FastAPI (Python)**. But how can a web framework like FastAPI run smoothly on Lambda? The answer is using the **Mangum** library.
+**Advantages of this solution:**
+- **Zero-ops:** Completely eliminates the burden of operating system administration and server scaling. AWS Lambda automatically scales based on actual traffic volume.
+- **Cost optimization:** During the development phase and for small to medium-scale applications, operational costs are significantly minimized, often covered by the AWS Free Tier. Costs are only incurred based on the actual code execution time.
+- **Development efficiency:** Programming with FastAPI is straightforward and modern, automatically generating API documentation according to the Swagger/OpenAPI standard.
 
-✨ **Benefits of this stack:**
-- **Zero-ops:** No OS management, no worrying about scaling servers. Lambda scales automatically based on traffic.
-- **Cost-effective:** During development and for small applications, the running cost is close to $0 thanks to the AWS Free Tier. You only pay for the compute time you consume.
-- **Development speed:** Coding with FastAPI is fast, modern, and it automatically generates Swagger/OpenAPI documentation.
-
-Are there any other developers in the group who love the AWS Serverless ecosystem as much as I do? Do you usually use API Gateway or ALB to trigger Lambda? Let's share your thoughts below! 👇
+The Serverless approach is increasingly proving its effectiveness in building applications on the AWS cloud.
 
 ---
 **References:**

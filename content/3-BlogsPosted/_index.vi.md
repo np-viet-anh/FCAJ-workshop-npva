@@ -9,11 +9,11 @@ pre: " <b> 3. </b> "
 
 Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
 
-###  [Blog 1 - Đưa FastAPI (Python) lên AWS Lambda một cách dễ dàng với thư viện Mangum!](3.1-Blog1/)
-Blog này chia sẻ trải nghiệm xây dựng Backend Serverless cực nhanh và tiết kiệm chi phí sử dụng AWS Lambda, API Gateway kết hợp với FastAPI thông qua thư viện Mangum.
+###  [Blog 1 - Triển khai FastAPI (Python) trên AWS Lambda bằng thư viện Mangum](3.1-Blog1/)
+Bài viết này chia sẻ phương pháp xây dựng Backend theo kiến trúc Serverless, giúp tối ưu hóa thời gian triển khai và tiết kiệm chi phí bằng cách kết hợp AWS Lambda, API Gateway và FastAPI thông qua thư viện Mangum.
 
-###  [Blog 2 - Tại sao mình lại chọn Amazon DynamoDB cho ứng dụng URL Shortener?](3.2-Blog2/)
-Blog này giải thích lý do lựa chọn Amazon DynamoDB nhờ kiến trúc Key-Value hoàn hảo và độ trễ mili-giây, giúp tăng tốc độ truy xuất dữ liệu cực nhanh cho URL Shortener.
+###  [Blog 2 - Lý do lựa chọn Amazon DynamoDB cho ứng dụng URL Shortener](3.2-Blog2/)
+Bài viết này phân tích lý do Amazon DynamoDB là cơ sở dữ liệu phù hợp nhờ vào kiến trúc Key-Value và độ trễ ở mức mili-giây, đáp ứng yêu cầu truy xuất dữ liệu tốc độ cao của hệ thống URL Shortener.
 
-###  [Blog 3 - Host giao diện Web tĩnh "rẻ như cho" nhưng tốc độ bàn thờ với Amazon S3 và CloudFront!](3.3-Blog3/)
-Blog này giới thiệu cách host ứng dụng web tĩnh với chi phí siêu rẻ và khả năng chịu tải cao bằng việc kết hợp S3 tĩnh và mạng phân phối nội dung toàn cầu CloudFront.
+###  [Blog 3 - Giải pháp lưu trữ Web tĩnh hiệu năng cao và tối ưu chi phí với Amazon S3 và CloudFront](3.3-Blog3/)
+Bài viết này giới thiệu phương pháp lưu trữ ứng dụng web tĩnh với chi phí thấp và khả năng chịu tải cao bằng việc kết hợp tính năng Static Website Hosting của Amazon S3 và mạng phân phối nội dung toàn cầu Amazon CloudFront.

@@ -6,19 +6,17 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Host giao diện Web tĩnh "rẻ như cho" nhưng tốc độ bàn thờ với Amazon S3 và CloudFront!
+# Giải pháp lưu trữ Web tĩnh hiệu năng cao và tối ưu chi phí với Amazon S3 và CloudFront
 
-Xong phần Backend, tới phần giao diện (Frontend) của ứng dụng URL Shortener. Giao diện của mình chỉ đơn thuần là HTML, Javascript và TailwindCSS. Nếu chạy một server EC2 chỉ để host mấy file tĩnh này thì quá lãng phí.
+Đối với thành phần giao diện (Frontend) của ứng dụng URL Shortener, hệ thống sử dụng các công nghệ tĩnh bao gồm HTML, Javascript và TailwindCSS. Việc triển khai các tệp tĩnh này trên một máy chủ EC2 truyền thống sẽ không tận dụng được tối đa hiệu suất và gây lãng phí tài nguyên.
 
-Do đó, giải pháp "quốc dân" trên AWS mà mình sử dụng là kết hợp **Amazon S3** và **Amazon CloudFront**:
+Do đó, kiến trúc được áp dụng là sự kết hợp giữa **Amazon S3** và **Amazon CloudFront**:
 
-1️⃣ **Amazon S3 (Lưu trữ):** Chuyển S3 bucket sang chế độ Static Website Hosting. Nơi đây đóng vai trò như ổ cứng chứa source code UI của mình.
-2️⃣ **Amazon CloudFront (CDN):** Đây là "vũ khí bí mật". CloudFront phân phối nội dung (cache) tới các Edge Locations trên toàn thế giới. Dù người dùng ở Mỹ hay Việt Nam truy cập, web vẫn load ngay lập tức.
-3️⃣ **Bảo mật & Custom Domain:** CloudFront giúp mình dễ dàng ép buộc (force) kết nối HTTPS thông qua chứng chỉ SSL/TLS miễn phí từ AWS Certificate Manager (ACM), và trỏ tên miền cá nhân bằng Route 53.
+1. **Amazon S3 (Lưu trữ):** S3 bucket được cấu hình ở chế độ Static Website Hosting, đóng vai trò là không gian lưu trữ cho toàn bộ mã nguồn giao diện của ứng dụng.
+2. **Amazon CloudFront (Mạng phân phối nội dung - CDN):** CloudFront đảm nhiệm việc phân phối và lưu trữ bộ nhớ đệm (cache) nội dung tại các Edge Locations trên toàn cầu. Điều này giúp giảm thiểu độ trễ đáng kể, đảm bảo trang web được tải nhanh chóng bất kể vị trí địa lý của người dùng.
+3. **Bảo mật và Tên miền tùy chỉnh:** CloudFront hỗ trợ thiết lập kết nối mã hóa HTTPS thông qua chứng chỉ bảo mật SSL/TLS được cấp phát miễn phí từ AWS Certificate Manager (ACM), đồng thời kết hợp với Amazon Route 53 để định tuyến tới tên miền tùy chỉnh.
 
-💡 **Kết quả:** Mình có một website frontend khả năng chịu tải hàng chục ngàn truy cập một lúc mà không sập, trong khi chi phí mỗi tháng chỉ bằng... tiền giữ xe.
-
-Anh em thường host các dự án React/Vue/HTML tĩnh bằng dịch vụ gì trên AWS? 👇
+**Kết quả:** Giải pháp này mang lại một nền tảng frontend có khả năng đáp ứng đồng thời khối lượng truy cập lớn với hiệu năng cao, trong khi chi phí duy trì hàng tháng được tối ưu hóa ở mức thấp nhất.
 
 ---
 **Tài liệu tham khảo:**
