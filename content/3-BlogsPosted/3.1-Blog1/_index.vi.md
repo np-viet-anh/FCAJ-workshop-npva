@@ -25,3 +25,7 @@ Phương pháp tiếp cận Serverless kết hợp FastAPI và Mangum đang ch�
 - [Amazon API Gateway](https://aws.amazon.com/api-gateway/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Mangum](https://mangum.io/)
+
+---
+**Bài đăng trên cộng đồng:**
+- [Xem bài blog trên nhóm AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/posts/2233035990794694/)

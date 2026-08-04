@@ -25,3 +25,7 @@ The Serverless approach combining FastAPI and Mangum is strongly proving its eff
 - [Amazon API Gateway](https://aws.amazon.com/api-gateway/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Mangum](https://mangum.io/)
+
+---
+**Community Post:**
+- [View this blog post on AWS Study Group FCJ](https://www.facebook.com/groups/awsstudygroupfcj/posts/2233035990794694/)
